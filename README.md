@@ -1,4 +1,4 @@
-# 💊 MediCare Pharmacy Management System
+# 💊 Pharmacy Management System
 
 A desktop-based Pharmacy Management System built with **C# .NET Framework (Windows Forms)** and **SQL Server (LocalDB)**. The system supports three user roles — Customer, Pharmacist, and Admin — each with their own dedicated dashboard and features.
 
@@ -489,4 +489,4 @@ This project is for educational purposes.
 
 ---
 
-> Built with ❤️ using C# Windows Forms — MediCare Pharmacy © 2026
+> Built with ❤️ using C# Windows Forms — Pharmacy © 2026
