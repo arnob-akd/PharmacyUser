@@ -432,6 +432,8 @@ INSERT [dbo].[Users] ([UserID], [FirstName], [LastName], [Username], [Email], [P
 INSERT [dbo].[Users] ([UserID], [FirstName], [LastName], [Username], [Email], [Phone], [Password], [Role]) VALUES (3, N'arnob', N'das', N'arnob', N'arnob@gmail.com', N'01234567', N'1', N'Admin')
 INSERT [dbo].[Users] ([UserID], [FirstName], [LastName], [Username], [Email], [Phone], [Password], [Role]) VALUES (4, N'tonmoy', N'paul', N'tonmoy', N'tonmoy@123', N'1234567', N'1', N'Pharmacist')
 INSERT [dbo].[Users] ([UserID], [FirstName], [LastName], [Username], [Email], [Phone], [Password], [Role]) VALUES (5, N'kulas', N'hossain', N'kulas', N'kulas@123', N'12345', N'1', N'Admin')
+INSERT [dbo].[Users] ([UserID], [FirstName], [LastName], [Username], [Email], [Phone], [Password], [Role]) VALUES (6, N'Adreta', N'mallick', N'adreta', N'adreta1@com', N'01700000000', N'1', N'Pharmacist')
+
 SET IDENTITY_INSERT [dbo].[Users] OFF
 GO
 SET ANSI_PADDING ON
