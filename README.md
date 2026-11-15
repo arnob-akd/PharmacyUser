@@ -1,8 +1,20 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Pharmacy Management System: an animated banner with a heartbeat line, floating capsules and a pulsing medical cross" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/C%23-.NET%20Framework%204.7.2-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="C# .NET Framework 4.7.2">
+  <img src="https://img.shields.io/badge/UI-Windows%20Forms-0078D6?style=for-the-badge" alt="Windows Forms">
+  <img src="https://img.shields.io/badge/SQL%20Server-LocalDB-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server LocalDB">
+  <img src="https://img.shields.io/badge/IDE-Visual%20Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white" alt="Visual Studio">
+  <img src="https://img.shields.io/badge/OOP2-course%20project-ff7b6b?style=for-the-badge" alt="OOP2 course project">
+</p>
+
 # 💊 Pharmacy Management System
 
-A desktop-based Pharmacy Management System built with **C# .NET Framework (Windows Forms)** and **SQL Server (LocalDB)**. The system supports three user roles — Customer, Pharmacist, and Admin — each with their own dedicated dashboard and features.
+A desktop-based Pharmacy Management System built with **C# .NET Framework (Windows Forms)** and **SQL Server (LocalDB)**. The system supports three user roles — **Customer**, **Pharmacist**, and **Admin** — each with their own dedicated dashboard and features.
 
----
+<p align="center"><img src="assets/divider.svg" alt="" width="720"></p>
 
 ## 🖥️ Technology Stack
 
@@ -10,29 +22,44 @@ A desktop-based Pharmacy Management System built with **C# .NET Framework (Windo
 - **UI Framework:** Windows Forms (WinForms)
 - **Database:** SQL Server LocalDB (MSSQLLocalDB)
 - **IDE:** Visual Studio
-- **Database Access:** ADO.NET (SqlConnection, SqlCommand, SqlDataAdapter)
+- **Database Access:** ADO.NET (`SqlConnection`, `SqlCommand`, `SqlDataAdapter`)
 
----
+<p align="center">
+  <img src="assets/architecture.svg" alt="Animated diagram: a request travels from the Windows Forms UI through DBHelper to PharmacyDB and the result flows back" width="100%">
+</p>
 
 ## 👥 User Roles
 
 | Role | Description |
-|---|---|
+|------|-------------|
 | **Customer** | Browse medicines, manage cart, place orders, upload prescriptions, view invoices |
 | **Pharmacist** | Manage inventory, process orders, review prescriptions |
 | **Admin** | Full control — manage medicines, orders, users, prescriptions, view reports |
 
----
+<p align="center">
+  <img src="assets/roles.svg" alt="Animated cards for the Customer, Pharmacist and Admin roles that light up one after another" width="100%">
+</p>
+
+<p align="center"><img src="assets/divider.svg" alt="" width="720"></p>
 
 ## ✨ Features
 
+<p align="center">
+  <img src="assets/order-flow.svg" alt="Animated diagram: an order moves from Pending to Processing to Delivered, and a prescription from Uploaded to Pending to Approved or Rejected" width="100%">
+</p>
+
 ### 🔐 Authentication
+
 - Login with username and password
 - Role-based routing — Customer, Admin, Pharmacist each go to their own dashboard
 - Register new account
 - Forgot password / reset password
 
 ### 👤 Customer Dashboard
+
+<details open>
+<summary>Click to show or hide the Customer features</summary>
+
 - **Home** — welcome screen with quick stats and browse button
 - **Medicines** — browse all medicines with images, search by name or category, add to cart
 - **My Cart** — view cart items, update quantity, remove items, place order
@@ -41,14 +68,26 @@ A desktop-based Pharmacy Management System built with **C# .NET Framework (Windo
 - **Prescriptions** — upload prescription images, view upload history and status
 - **My Profile** — update personal info, change password
 
+</details>
+
 ### 💊 Pharmacist Dashboard
+
+<details>
+<summary>Click to show or hide the Pharmacist features</summary>
+
 - **Home** — stat cards (total medicines, low stock, pending orders, pending prescriptions)
 - **Inventory** — view all medicines, restock items, delete medicines, search
 - **Orders** — view and update order status (Pending → Processing → Delivered)
 - **Prescriptions** — approve or reject customer prescriptions
 - **My Profile** — update personal info, change password
 
+</details>
+
 ### 🛠️ Admin Dashboard
+
+<details>
+<summary>Click to show or hide the Admin features</summary>
+
 - **Home** — overview cards (total users, medicines, orders, revenue)
 - **Medicines** — add, edit, delete medicines, upload medicine images
 - **Orders** — view all orders with itemized details, update order status
@@ -57,14 +96,16 @@ A desktop-based Pharmacy Management System built with **C# .NET Framework (Windo
 - **Reports** — revenue stats, delivered/pending order counts, top selling medicines table
 - **My Profile** — update personal info, change password
 
----
+</details>
+
+<p align="center"><img src="assets/divider.svg" alt="" width="720"></p>
 
 ## 🗄️ Database Structure
 
-The database is named **PharmacyDB** and contains the following tables:
+The database is named `PharmacyDB` and contains the following tables:
 
 | Table | Purpose |
-|---|---|
+|-------|---------|
 | `Users` | Stores all user accounts with role (Customer / Admin / Pharmacist) |
 | `Medicines` | Medicine catalog with name, category, price, stock, image |
 | `Cart` | Temporary cart items per user |
@@ -73,7 +114,9 @@ The database is named **PharmacyDB** and contains the following tables:
 | `Orders` | Legacy order table |
 | `Prescriptions` | Uploaded prescription files per user |
 
----
+<p align="center">
+  <img src="assets/er-diagram.svg" alt="Animated diagram of the seven PharmacyDB tables with a pulse travelling along each foreign-key relationship" width="100%">
+</p>
 
 ## ⚙️ Project Structure
 
@@ -99,7 +142,7 @@ PharmacyUser/
         └── AssemblyInfo.cs
 ```
 
----
+<p align="center"><img src="assets/divider.svg" alt="" width="720"></p>
 
 ## 🚀 Getting Started
 
@@ -112,21 +155,25 @@ PharmacyUser/
 ### Setup Steps
 
 **1. Clone the repository**
-```
+
+```bash
 git clone https://github.com/your-username/PharmacyUser.git
 ```
 
 **2. Set up the database**
 
 Open SQL Server Management Studio (SSMS) or use the LocalDB query tool and run the provided SQL script:
+
 ```
 PharmacyDB_Script.sql
 ```
+
 This will create the `PharmacyDB` database with all tables and sample data automatically.
 
 **3. Check the connection string**
 
 Open `App.config` and verify the connection string matches your LocalDB instance:
+
 ```xml
 <connectionStrings>
     <add name="PharmacyDB"
@@ -137,43 +184,46 @@ Open `App.config` and verify the connection string matches your LocalDB instance
 
 **4. Open and run the project**
 
-Open `PharmacyUser.sln` in Visual Studio and press **F5** to build and run.
-
----
+Open `PharmacyUser.sln` in Visual Studio and press `F5` to build and run.
 
 ## 🔑 Default Login Credentials
 
 | Username | Password | Role |
-|---|---|---|
+|----------|----------|------|
 | `akib` | `1` | Customer |
 | `arnob` | `1` | Admin |
 | `tonmoy` | `1` | Pharmacist |
 | `kulas` | `1` | Admin |
 
----
-
 ## 📁 Medicine Images
 
 Medicine images are stored locally in:
+
 ```
 bin/Debug/MedicineImages/
 ```
+
 The Admin panel allows uploading new images for each medicine directly from the UI. Images are saved to this folder and the path is stored in the database.
 
----
+<p align="center"><img src="assets/divider.svg" alt="" width="720"></p>
 
 ## 🏗️ OOP Concepts Used
 
 - **Inheritance** — All dashboard forms inherit from `Form` (e.g. `AdminDashboard : Form`)
 - **Encapsulation** — Private fields for colors and panels; public properties for user data
 - **Abstraction** — `DBHelper` hides all database logic; each `Show___()` method hides section complexity
-- **Polymorphism** — Same `Click`/`Paint` events with different behavior per button/panel; `DrawCard()` method works on any panel
+- **Polymorphism** — Same Click/Paint events with different behavior per button/panel; `DrawCard()` method works on any panel
 
----
+<p align="center">
+  <img src="assets/oop-concepts.svg" alt="Four small animations illustrating inheritance, encapsulation, abstraction and polymorphism" width="100%">
+</p>
 
 ## 🗃️ Full Database SQL Script
 
 Run the following script in SQL Server Management Studio (SSMS) to create and populate the entire database from scratch.
+
+<details>
+<summary>Click to expand the full SQL script</summary>
 
 ```sql
 USE [master]
@@ -481,9 +531,11 @@ ALTER DATABASE [PharmacyDB] SET  READ_WRITE
 GO
 ```
 
-> **Note:** The `ImagePath` values in the Medicines and Prescriptions insert statements have been left blank intentionally. After running the script, use the Admin panel to upload medicine images from your local machine.
+</details>
 
----
+> **Note:** The `ImagePath` values in the `Medicines` and `Prescriptions` insert statements have been left blank intentionally. After running the script, use the Admin panel to upload medicine images from your local machine.
+
+<p align="center"><img src="assets/divider.svg" alt="" width="720"></p>
 
 ## 📄 License
 
@@ -491,4 +543,4 @@ This project is for educational purposes.
 
 ---
 
-> Built with ❤️ using C# Windows Forms — Pharmacy © 2026
+<p align="center">Built with ❤️ using C# Windows Forms — Pharmacy © 2026</p>
